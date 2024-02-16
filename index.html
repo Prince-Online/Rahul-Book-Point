@@ -1,0 +1,709 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
+<style>
+  *{
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif; 
+  overflow-x: hidden;
+}
+.nav{
+  background: #e3e3e3;
+  width: 100%;
+}
+.header{
+  height: auto;
+}
+.icon-con{
+  margin-left: 3%;
+}
+.icon{
+  width: 50px;
+}
+.nav-offer,.nav-social,.nav-review{
+  text-decoration: none;
+  color: #000;
+}
+@media screen and (max-width: 600px){
+  .icon{
+    width: 39px;
+    text-align: center;
+  }
+  .menu-icon{
+    font-size: 24px;
+    margin-left: 3%;
+  }
+  .nav{
+    height: auto;
+    align-items: center;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  }
+  .icon-con{
+    text-align: center;
+    margin-left: 34%;
+  }
+  .scroll-bar {
+      display: none;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      transition: height 0.5s ease;
+    }
+    #first-box, #apple-models, #mi-models, #realme-models{
+    margin-left: 8%;
+    margin-top: 4%;
+    padding: 8px;
+    width: 80%;
+    }
+    .second-box, .section {
+      display: none;
+    }
+    .head-h2{
+      text-align: center;
+      margin-top: 10px;
+      text-decoration: underline;
+    }
+    .link{
+      margin-left: 4%;
+        font-size: 14px;
+    }
+    .title{
+      margin-left: 3%;
+    }
+    #section1{
+      margin-top: 5%;
+    }
+    .products{
+      background: #f9f9f9;
+      height: 70%;
+    }
+    #search-box{
+      padding: 5px;
+      border-radius: 25px;
+      outline: none;
+      background: #e3e3e3;
+      border: 1px solid #b8b8b8;
+      width: 110px;
+      margin-left: 10%;
+    }
+    #user-details{
+    margin-top: 10px;
+    border: 1px solid;
+    width: 190px;
+  }
+  #section2,#section3{
+    margin-top: 3%;
+  }
+  #cart-icon{
+    margin-left: 4%;
+  }
+  .next {
+    margin-bottom: 10px;
+    margin-left: 3%;
+    padding: 4px;
+    margin-top: 5px;
+    border: 1px solid purple;
+    background: transparent;
+   }
+   #cart-items {
+    margin-left: 3%;
+   }
+   #cart{
+    border: 1px solid;
+    width: 190px;
+   }
+   #user-details {
+    margin-top: 10px;
+    border: 1px solid;
+    width: 190px;
+   }
+   .int {
+    padding: 4px;
+    margin-left: 5%;
+    margin-top: 10px;
+   }
+   .order {
+    padding: 4px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    width: 170px;
+    border: 1px solid purple;
+    background: transparent;
+   }
+   #cart-icon,.title,.fee,.total{
+    margin-left: 4%;
+   }
+   #cart-icon{
+    text-align: center;
+   }
+   #bag{
+    font-size: 40px;
+    display: none;
+    padding: 3%;
+   }
+   .title{
+    margin-top: 8px;
+   }
+   .next{
+    margin-left: 9px;
+   }
+   .slider:before, .slider:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  .slider:before {
+    transform: translateY(-5px);
+  }
+  .slider:after {
+    transform: translateY(5px);
+  }
+  .slider-content {
+    position: fixed;
+    top: 0;
+    right: -230px;
+    height: 100%;
+    background-color: #f4f4f4;
+    transition: right 0.3s ease; 
+    z-index: 998;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  .close-button {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 32px;
+    cursor: pointer;
+}
+  .slider-container{
+    overflow: hidden;
+  }
+  .top-classmate-img{
+    width: 102px;
+    background: transparent;
+  }
+  .top-classmate-txt{
+    font-size: 13px;
+  }
+  .top-classmate{
+    background: transparent;
+    display: grid;
+    margin-left: 5%;
+    margin-top: 4%;
+    justify-items: stretch;
+  }
+  .copy{
+    display: flex;
+  }
+  .top-classmate-price{
+    background: purple;
+    padding: 5px;
+    border: none;
+    border-radius: 1px;
+    color: #FFF;
+  }
+  .remove-button{
+    background: #ffa3a3;
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
+}
+</style>
+<div class="nav">
+  <div class="menu-icon" onclick="toggleMenuBar()">&#9776;</div>
+  <div class="scroll-bar" id="scrollBar">
+    <div class="scroll-icon" onclick="scrollToSection('section1')">Offers</div>
+    <div class="scroll-icon" onclick="scrollToSection('section2')">Discount</div>
+    <div class="slider" id="slider">Cart</div>
+  </div>
+  <div class="icon-con">
+  <img src="https://i.ibb.co/98NcGMY/icon.png" class="icon" onclick="reload()">
+</div>
+<input type="text" id="search-box" placeholder="Search...">
+<div class="slider-content" id="sliderContent">
+  <span class="close-button" id="closeButton">×</span>
+  <div id="slider-container" class="slider-container">
+    <span id="cart-icon" onclick="toggleCart()"><i class="fa-solid fa-bag-shopping" id="bag"></i></span>
+    <div id="cart">
+    <h2 class="title">Shopping Cart</h2>
+    <ul id="cart-items">
+    </ul>
+    <p class="total">Total: Rs. <span id="cart-total">0</span></p>
+    <p class="fee">Deleviery Fee: Rs. <span id="additional-fee">0</span></p>
+    <button onclick="proceedToCheckout()" class="next">Next</button>
+</div>
+
+<form id="user-details" style="display: none;">
+    <input type="text" id="name" name="name" placeholder="Name:" required class="int"><br>
+    <input type="number" id="mobile" name="mobile" placeholder="Mobile No.:" required class="int"><br>
+    <input type="number" id="postal-code" maxlength="6" name="postal-code" onchange="validatePostalCode()" placeholder="Postal Code:" required class="int"><br>
+    <input type="text" id="state" name="state" readonly placeholder="State:" required class="int"><br>
+    <input type="text" id="city" name="city" readonly placeholder="City:" required class="int"><br>
+    <input type="text" id="road-lane" name="road-lane" placeholder="Road Lane:" required class="int"><br><br>
+    <button onclick="placeOrder()" class="order">Place Order</button>
+</form>
+</div>
+</div>
+</div>
+<form id="user-details" style="display: none;">
+    <input type="text" id="name" name="name" placeholder="Name:" required class="int"><br>
+    <input type="number" id="mobile" name="mobile" placeholder="Mobile No.:" required class="int"><br>
+    <input type="number" id="postal-code" maxlength="6" name="postal-code" onchange="validatePostalCode()" placeholder="Postal Code:" required class="int"><br>
+    <input type="text" id="state" name="state" readonly placeholder="State:" required class="int"><br>
+    <input type="text" id="city" name="city" readonly placeholder="City:" required class="int"><br>
+    <input type="text" id="road-lane" name="road-lane" placeholder="Road Lane:" required class="int"><br><br>
+    <button onclick="placeOrder()" class="order">Place Order</button>
+</form>
+</div>
+</div>
+<hr>
+<div class="products">
+  <select id="first-box" onchange="showSecondBox()">
+    <option value="">Select Brand</option>
+    <option value="apple">Classmate</option>
+    <option value="mi">Sps</option>
+    <option value="realme">Ellora</option>
+  </select>
+
+  <div id="apple" class="second-box">
+    <select id="apple-models" onchange="showSections('apple')">
+      <option value="">Select Model</option>
+      <option value="iphone-x">ClassMate Register</option>
+      <option value="iphone-12">ClassMate Top</option>
+      <option value="iphone-13">ClassMate Test</option>
+    </select>
+  </div>
+
+  <div id="mi" class="second-box">
+    <select id="mi-models" onchange="showSections('mi')">
+      <option value="">Select Model</option>
+      <option value="mi-12">Sps Register</option>
+      <option value="mi-13">Sps Top</option>
+      <option value="mi-4">Sps Test</option>
+    </select>
+  </div>
+
+  <div id="realme" class="second-box">
+    <select id="realme-models" onchange="showSections('realme')">
+      <option value="">Select Model</option>
+      <option value="realme-1">Ellora Register</option>
+      <option value="realme-2">Ellora Top</option>
+      <option value="realme-3">Ellora Test</option>
+    </select>
+  </div>
+  <div id="iphone-x-section" class="section">
+    <h2 class="head-h2">ClassMate Register</h2>
+    <div class="copy">
+    <div class="top-classmate">
+      <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
+      <p class="top-classmate-txt">Classmate 172 Pgs</p>
+      <button onclick="addToCart('Classmate 172 Pgs Register', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
+      <p class="top-classmate-txt">Classmate 192 Pgs</p>
+      <button onclick="addToCart('Classmate 192 Pgs Register', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/diary-notebook/w/j/d/classmate-02000221-original-imaeqhyexj8gzxzu.jpeg?q=20&crop=false" style="height: 134px;">
+      <p class="top-classmate-txt">Classmate 72 Pgs</p>
+      <button onclick="addToCart('Classmate 72 Pgs Register', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+    </div>
+</div>
+  </div>
+
+  <div id="iphone-12-section" class="section">
+    <h2 class="head-h2">ClassMate Top</h2>
+    <div class="copy">
+    <div class="top-classmate">
+      <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
+      <p class="top-classmate-txt">Classmate 172 Pgs</p>
+      <button onclick="addToCart('Classmate 172 Pgs Top', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
+      <p class="top-classmate-txt">Classmate 192 Pgs</p>
+      <button onclick="addToCart('Classmate 192 Pgs Top', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
+      <p class="top-classmate-txt">Classmate 72 Pgs</p>
+      <button onclick="addToCart('Classmate 72 Pgs Top', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+    </div>
+</div>
+
+  </div>
+
+  <div id="iphone-13-section" class="section">
+    <h2 class="head-h2">ClassMate Test</h2>
+  </div>
+
+  <div id="mi-12-section" class="section">
+    <h2 class="head-h2">Sps Register</h2>
+  </div>
+
+  <div id="mi-13-section" class="section">
+    <h2 class="head-h2">Sps Top</h2>
+  </div>
+
+  <div id="mi-4-section" class="section">
+    <h2 class="head-h2">Sps Test</h2>
+  </div>
+
+  <div id="realme-1-section" class="section">
+    <h2 class="head-h2">Ellora Register</h2>
+  </div>
+
+  <div id="realme-2-section" class="section">
+    <h2 class="head-h2">Ellora Top</h2>
+  </div>
+
+  <div id="realme-3-section" class="section">
+    <h2 class="head-h2">Ellora Test</h2>
+  </div>
+</div>
+<hr>
+<div id="section1">
+  <h3 class="title">Offer:-</h3>
+  <li class="link">Make Purchase Of More Than 300 And Recieve Free Delivery.</li>
+    <li class="link">Buy More Than ₹500 Get Chance To Win A Gift.</li>
+    <li class="link">Buy 5 Register Size SPS Copy 192 Pages And Win a Top Copy.</li>
+</div><br><hr>
+<div id="section2">
+  <h3 class="title">Discount:-</h3>
+  <li class="link">Products Have Upto 20% Off On MRP.</li>
+    <li class="link">All Products More Than ₹500 have Upto 50% Discount.</li>
+    <li class="link">All Products More Than ₹300 have Upto 32% Discount.</li>
+</div><br><hr>
+
+<script>
+  function toggleMenuBar() {
+      var scrollBar = document.getElementById('scrollBar');
+      if (scrollBar.style.display === 'none') {
+        scrollBar.style.display = 'block';
+      } else {
+        scrollBar.style.display = 'none';
+      }
+    }
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+<script>
+  function reload(){
+    location.reload()
+  }
+</script>
+<script>
+  function updateSectionsVisibility() {
+      var searchText = document.getElementById("search-box").value.trim().toLowerCase();
+      var sections = document.querySelectorAll(".section");
+
+      if (searchText === "") {
+        sections.forEach(function(section) {
+          section.style.display = "none";
+        });
+      } else {
+        sections.forEach(function(section) {
+          var sectionText = section.textContent.toLowerCase();
+          if (sectionText.includes(searchText)) {
+            section.style.display = "block";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      }
+    }
+
+    document.getElementById("search-box").addEventListener("input", function() {
+      updateSectionsVisibility();
+    });
+
+    document.getElementById("search-box").addEventListener("keydown", function(event) {
+      if (event.key === "Backspace") {
+        if (this.value.trim() === "") {
+          updateSectionsVisibility();
+        }
+      }
+    });
+
+    function showSecondBox() {
+      var firstBox = document.getElementById("first-box");
+      var secondBoxes = document.querySelectorAll(".second-box");
+
+      secondBoxes.forEach(function(box) {
+        box.style.display = "none";
+      });
+
+      var selectedBrand = firstBox.value;
+      var selectedBox = document.getElementById(selectedBrand);
+      if (selectedBox) {
+        selectedBox.style.display = "block";
+      }
+    }
+
+    function showSections(brand) {
+      var selectedModel = document.getElementById(brand + "-models").value;
+      var sections = document.querySelectorAll(".section");
+
+      sections.forEach(function(section) {
+        section.style.display = "none";
+      });
+
+      if (selectedModel !== "") {
+        var selectedSection = document.getElementById(selectedModel + "-section");
+        if (selectedSection) {
+          selectedSection.style.display = "block";
+        }
+      }
+    }
+</script>
+<script>
+  let cart = [];
+    let total = 0;
+    let additionalFee = 0;
+    let productQuantities = {};
+    const postalCodes = {
+        "821013": { state: "Goa", city: "Hero" },
+        "827010": { state: "Jharkhand", city: "Bokaro" }
+    };
+
+    // Load cart data from localStorage on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        loadCartFromLocalStorage();
+        updateCartView();
+    });
+
+    // Save cart data to localStorage
+    function saveCartToLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('total', total.toString());
+        localStorage.setItem('additionalFee', additionalFee.toString());
+        localStorage.setItem('productQuantities', JSON.stringify(productQuantities));
+    }
+
+    // Load cart data from localStorage
+    function loadCartFromLocalStorage() {
+        const storedCart = localStorage.getItem('cart');
+        const storedTotal = localStorage.getItem('total');
+        const storedAdditionalFee = localStorage.getItem('additionalFee');
+        const storedProductQuantities = localStorage.getItem('productQuantities');
+
+        if (storedCart) {
+            cart = JSON.parse(storedCart);
+            total = parseFloat(storedTotal);
+            additionalFee = parseFloat(storedAdditionalFee);
+            productQuantities = JSON.parse(storedProductQuantities);
+        }
+    }
+
+    function sendDataToGoogleSheets(data) {
+        var url = 'https://script.google.com/macros/s/AKfycbwsBYuuRuRrjuiuAJtHufY0Vl4dCeGcempGcM1twhjEb2W0sNcRo-pD63RZlCpTdABX/exec';
+
+        fetch(url, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => console.log('Data sent to Google Sheets:', response))
+        .catch(error => console.error('Error sending data to Google Sheets:', error));
+    }
+
+    function addToCart(productName, price) {
+        cart.push({ name: productName, price: price });
+        total += price;
+
+        if (productQuantities[productName]) {
+            productQuantities[productName]++;
+        } else {
+            productQuantities[productName] = 1;
+        }
+
+        if (total < 300) {
+            additionalFee = 49;
+        } else {
+            additionalFee = 0;
+        }
+
+        updateCartView();
+        saveCartToLocalStorage(); // Save cart data to localStorage
+    }
+
+    function updateCartView() {
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const additionalFeeDisplay = document.getElementById('additional-fee');
+
+        cartItems.innerHTML = '';
+        Object.keys(productQuantities).forEach(productName => {
+            const li = document.createElement('li');
+            li.textContent = productName + ' - Rs. ' + cart.find(item => item.name === productName).price + ' (x' + productQuantities[productName] + ')';
+            const removeButton = document.createElement('span');
+            removeButton.textContent = 'Remove';
+            removeButton.className = 'remove-button';
+            removeButton.onclick = function() {
+                removeFromCart(productName);
+            };
+            li.appendChild(removeButton);
+            cartItems.appendChild(li);
+        });
+
+        const totalAmount = total + additionalFee;
+        cartTotal.textContent = totalAmount;
+        additionalFeeDisplay.textContent = additionalFee;
+    }
+
+    function removeFromCart(productName) {
+        const removedItem = cart.find(item => item.name === productName);
+        total -= removedItem.price * productQuantities[productName];
+
+        delete productQuantities[productName];
+
+        if (total < 300) {
+            additionalFee = 49;
+        } else {
+            additionalFee = 0;
+        }
+
+        cart = cart.filter(item => item.name !== productName);
+        updateCartView();
+
+        if (cart.length === 0) {
+            additionalFee = 0;
+            updateCartView();
+        }
+
+        saveCartToLocalStorage(); // Save cart data to localStorage
+    }
+
+    function toggleCart() {
+    const cartDisplay = document.getElementById('cart').style.display;
+    document.getElementById('cart').style.display = cartDisplay === 'none' ? 'block' : 'none';
+    document.getElementById('user-details').style.display = 'none'; // Add this line
+    if (cartDisplay === 'none') {
+        updateCartView();
+    }
+}
+
+
+    function proceedToCheckout() {
+        document.getElementById('user-details').style.display = 'block';
+    }
+
+    function validatePostalCode() {
+        const postalCodeInput = document.getElementById('postal-code');
+        const postalCode = postalCodeInput.value.trim();
+        if (!/^\d{6}$/.test(postalCode)) {
+            alert("Postal code must contain 6 numbers.");
+            postalCodeInput.value = "";
+            return;
+        }
+        fillAddress(postalCode);
+    }
+
+    function fillAddress(postalCode) {
+        const stateInput = document.getElementById('state');
+        const cityInput = document.getElementById('city');
+        if (postalCode in postalCodes) {
+            stateInput.value = postalCodes[postalCode].state;
+            cityInput.value = postalCodes[postalCode].city;
+        } else {
+            stateInput.value = "";
+            cityInput.value = "";
+            alert("Postal code not found.");
+        }
+    }
+
+    function placeOrder() {
+    const name = document.getElementById('name').value;
+    const mobile = document.getElementById('mobile').value;
+    const postalCode = document.getElementById('postal-code').value;
+    const state = document.getElementById('state').value;
+    const city = document.getElementById('city').value;
+    const roadLane = document.getElementById('road-lane').value;
+
+    // Check if any required field is empty
+    if (!name || !mobile || !postalCode || !state || !city || !roadLane) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    // Check if the cart is empty
+    if (cart.length === 0) {
+        alert("Your cart is empty. Add items before placing an order.");
+        return;
+    }
+
+    const orderDetails = {
+        name: name,
+        mobile: mobile,
+        postalCode: postalCode,
+        state: state,
+        city: city,
+        roadLane: roadLane,
+        cart: cart
+    };
+
+    sendDataToGoogleSheets(orderDetails);
+
+    if (total === 0) {
+        alert("Your total amount is 0. Please add items to your cart before placing an order.");
+        return;
+    }
+
+    alert("Order placed successfully!");
+    cart = [];
+    total = 0;
+    additionalFee = 0;
+    productQuantities = {};
+    updateCartView();
+    document.getElementById('user-details').reset();
+    document.getElementById('user-details').style.display = 'none';
+    localStorage.clear();
+}
+</script>
+<script>
+  const slider = document.getElementById('slider');
+  const sliderContent = document.getElementById('sliderContent');
+  const closeButton = document.getElementById('closeButton');
+
+  let isOpen = false;
+
+  slider.addEventListener('click', function() {
+    if (isOpen) {
+      sliderContent.style.right = '-300px'; 
+      slider.style.transform = 'rotate(0deg)';
+      closeButton.style.display = 'none';
+    } else {
+      sliderContent.style.right = '0'; 
+      slider.style.transform = 'rotate(180deg)';
+      closeButton.style.display = 'block';
+    }
+    isOpen = !isOpen;
+  });
+
+  closeButton.addEventListener('click', function() {
+    sliderContent.style.right = '-300px'; 
+    slider.style.transform = 'rotate(0deg)';
+    closeButton.style.display = 'none'; 
+    isOpen = false;
+  });
+</script>
