@@ -1,3 +1,4 @@
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +29,198 @@
   text-decoration: none;
   color: #000;
 }
+.icon{
+    width: 39px;
+    text-align: center;
+  }
+  .menu-icon{
+    font-size: 24px;
+    margin-left: 3%;
+  }
+  .nav{
+    height: auto;
+    align-items: center;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  }
+  .icon-con{
+    text-align: center;
+    margin-left: 34%;
+  }
+  .scroll-bar {
+      display: none;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      transition: height 0.5s ease;
+    }
+    #first-box, #apple-models, #mi-models, #realme-models,#lenovo-models,#asus-models,#acer-models{
+    margin-left: 8%;
+    margin-top: 4%;
+    padding: 8px;
+    width: 80%;
+    }
+    .second-box, .section {
+      display: none;
+    }
+    .head-h2{
+      text-align: center;
+      margin-top: 10px;
+      text-decoration: underline;
+    }
+    .link{
+      margin-left: 4%;
+        font-size: 14px;
+    }
+    .title{
+      margin-left: 3%;
+    }
+    #section1{
+      margin-top: 5%;
+    }
+    .products{
+      background: #f9f9f9;
+      height: 70%;
+    }
+    #search-box{
+      padding: 5px;
+      border-radius: 25px;
+      outline: none;
+      background: #e3e3e3;
+      border: 1px solid #b8b8b8;
+      width: 110px;
+      margin-left: 45%;
+    }
+    #user-details{
+    margin-top: 10px;
+    border: 1px solid;
+    width: 190px;
+  }
+  #section2,#section3{
+    margin-top: 3%;
+  }
+  #cart-icon{
+    margin-left: 4%;
+  }
+  .next {
+    margin-bottom: 10px;
+    margin-left: 3%;
+    padding: 4px;
+    margin-top: 5px;
+    border: 1px solid purple;
+    background: transparent;
+   }
+   #cart-items {
+    margin-left: 3%;
+   }
+   #cart{
+    border: 1px solid;
+    width: 190px;
+   }
+   #user-details {
+    margin-top: 10px;
+    border: 1px solid;
+    width: 190px;
+   }
+   .int {
+    padding: 4px;
+    margin-left: 5%;
+    margin-top: 10px;
+   }
+   .order {
+    padding: 4px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    width: 170px;
+    border: 1px solid purple;
+    background: transparent;
+   }
+   #cart-icon,.title,.fee,.total{
+    margin-left: 4%;
+   }
+   #cart-icon{
+    text-align: center;
+   }
+   #bag{
+    font-size: 40px;
+    display: none;
+    padding: 3%;
+   }
+   .title{
+    margin-top: 8px;
+   }
+   .next{
+    margin-left: 9px;
+   }
+   .slider:before, .slider:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  .slider:before {
+    transform: translateY(-5px);
+  }
+  .slider:after {
+    transform: translateY(5px);
+  }
+  .slider-content {
+    position: fixed;
+    top: 0;
+    right: -230px;
+    height: 100%;
+    background-color: #f4f4f4;
+    transition: right 0.3s ease; 
+    z-index: 998;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  .close-button {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 32px;
+    cursor: pointer;
+}
+  .slider-container{
+    overflow: hidden;
+  }
+  .top-classmate-img{
+    width: 102px;
+    background: transparent;
+  }
+  .top-classmate-txt{
+    font-size: 13px;
+  }
+  .top-classmate{
+    background: transparent;
+    display: grid;
+    margin-left: 5%;
+    margin-top: 4%;
+    justify-items: stretch;
+  }
+  .copy{
+    display: flex;
+  }
+  .top-classmate-price{
+    background: purple;
+    padding: 5px;
+    border: none;
+    border-radius: 1px;
+    color: #FFF;
+  }
+  .remove-button{
+    background: #ffa3a3;
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
 @media screen and (max-width: 600px){
   .icon{
     width: 39px;
@@ -58,7 +251,7 @@
       left: 10px;
       transition: height 0.5s ease;
     }
-    #first-box, #apple-models, #mi-models, #realme-models{
+    #first-box, #apple-models, #mi-models, #realme-models,#lenovo-models,#asus-models,#acer-models{
     margin-left: 8%;
     margin-top: 4%;
     padding: 8px;
@@ -231,7 +424,7 @@
     <div class="slider" id="slider">Cart</div>
   </div>
   <div class="icon-con">
-  <img src="https://i.ibb.co/98NcGMY/icon.png" class="icon" onclick="reload()">
+  <img src="icon.png" class="icon" onclick="reload()">
 </div>
 <input type="text" id="search-box" placeholder="Search...">
 <div class="slider-content" id="sliderContent">
@@ -277,8 +470,34 @@
     <option value="apple">Classmate</option>
     <option value="mi">Sps</option>
     <option value="realme">Ellora</option>
+    <option value="lenovo">Books</option>
+    <option value="asus">Freedom</option>
+    <option value="acer">Rahul Book Point Extra</option>
   </select>
-
+<div id="lenovo" class="second-box">
+  <select id="lenovo-models" onchange="showSections('lenovo')">
+    <option value="">Select Model</option>
+    <option value="lenovo-1">Nceart</option>
+    <option value="lenovo-2">Grammar</option>
+    <option value="lenovo-3">Story</option>
+  </select>
+</div>
+<div id="asus" class="second-box">
+  <select id="asus-models" onchange="showSections('asus')">
+    <option value="">Select Model</option>
+    <option value="asus-1">Test Copy</option>
+    <option value="asus-2">Register</option>
+    <option value="asus-3">Top</option>
+  </select>
+</div>
+<div id="acer" class="second-box">
+  <select id="acer-models" onchange="showSections('acer')">
+    <option value="">Select Model</option>
+    <option value="acer-1">Pencil / Pen</option>
+    <option value="acer-2">Glue</option>
+    <option value="acer-3">Maps / Chart</option>
+  </select>
+</div>
   <div id="apple" class="second-box">
     <select id="apple-models" onchange="showSections('apple')">
       <option value="">Select Model</option>
@@ -310,18 +529,18 @@
     <div class="copy">
     <div class="top-classmate">
       <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
-      <p class="top-classmate-txt">Classmate 172 Pgs</p>
-      <button onclick="addToCart('Classmate 172 Pgs Register', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+      <p class="top-classmate-txt">Classmate 240 Pgs(RULE)</p>
+      <button onclick="addToCart('Classmate 240 Pgs REG (RULE)', 90)" class="top-classmate-price"><del>₹105</del>₹90</button>
     </div>
     <div class="top-classmate">
       <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
-      <p class="top-classmate-txt">Classmate 192 Pgs</p>
-      <button onclick="addToCart('Classmate 192 Pgs Register', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+      <p class="top-classmate-txt">Classmate 400 Pgs(RULE)</p>
+      <button onclick="addToCart('Classmate 400 Pgs REG (RULE)', 160)" class="top-classmate-price"><del>₹185</del>₹160</button>
     </div>
     <div class="top-classmate">
       <img src="https://rukminim2.flixcart.com/image/850/1000/diary-notebook/w/j/d/classmate-02000221-original-imaeqhyexj8gzxzu.jpeg?q=20&crop=false" style="height: 134px;">
-      <p class="top-classmate-txt">Classmate 72 Pgs</p>
-      <button onclick="addToCart('Classmate 72 Pgs Register', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+      <p class="top-classmate-txt">Classmate 172 Pgs (RULE)</p>
+      <button onclick="addToCart('Classmate 172 Pgs REG', 120)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
 </div>
   </div>
@@ -331,50 +550,278 @@
     <div class="copy">
     <div class="top-classmate">
       <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
-      <p class="top-classmate-txt">Classmate 172 Pgs</p>
-      <button onclick="addToCart('Classmate 172 Pgs Top', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+      <p class="top-classmate-txt">Classmate 172 Pgs (RULE)</p>
+      <button onclick="addToCart('Classmate 172 Pgs Top (RULE)', 45)" class="top-classmate-price" style="width: 86px;"><del>₹55</del>₹45</button>
     </div>
     <div class="top-classmate">
-      <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
-      <p class="top-classmate-txt">Classmate 192 Pgs</p>
-      <button onclick="addToCart('Classmate 192 Pgs Top', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+      <img src="https://www.bigbasket.com/media/uploads/p/l/278811_3-classmate-notebook-long-unruled-33x21cm.jpg" class="top-classmate-img">
+      <p class="top-classmate-txt">Classmate 120 Pgs (RULE)</p>
+      <button onclick="addToCart('Classmate 120 Pgs Top (RULE)', 30)" class="top-classmate-price" style="width: 86px;"><del>₹35</del>₹30</button>
     </div>
+</div>
+</div>
+  <div id="iphone-13-section" class="section">
+    <h2 class="head-h2">ClassMate Test</h2>
+    <div class="copy">
     <div class="top-classmate">
       <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
-      <p class="top-classmate-txt">Classmate 72 Pgs</p>
-      <button onclick="addToCart('Classmate 72 Pgs Top', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+      <p class="top-classmate-txt">Classmate 96 Pgs (RULE)</p>
+      <button onclick="addToCart('Classmate 96 Pgs Test (RULE)', 17)" class="top-classmate-price" style="width: 68px; margin-left: 20px;"><del>₹20</del>₹17</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.bigbasket.com/media/uploads/p/l/278811_3-classmate-notebook-long-unruled-33x21cm.jpg" class="top-classmate-img">
+      <p class="top-classmate-txt">Classmate 40 Pgs (RULE)</p>
+      <button onclick="addToCart('Classmate 40 Pgs (RULE) Test', 60)" class="top-classmate-price" style="width: 68px; margin-left: 20px;">₹10</button>
+    </div>
+  </div>
+</div>
+<div id="mi-12-section" class="section">
+    <h2 class="head-h2">Sps Register</h2>
+    <div class="copy">
+        <div class="top-classmate">
+            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
+            <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 172 Pgs(RULE)', 50)" class="top-classmate-price"><del>₹84</del> ₹50</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 192 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 192 Pgs(RULE)', 60)" class="top-classmate-price" ><del>₹82</del> ₹60</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/diary-notebook/w/j/d/classmate-02000221-original-imaeqhyexj8gzxzu.jpeg?q=20&crop=false" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price"><del>₹120</del> ₹80</button>
+        </div>
+      </div><div class="copy">
+        <div class="top-classmate">
+            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
+            <p class="top-classmate-txt">SPS 320 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 320 Pgs(RULE)', 90)" class="top-classmate-price"><del>₹180</del> ₹90</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 400 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 400 Pgs(RULE)', 120)" class="top-classmate-price"><del>₹190</del> ₹120</button>
+        </div>
     </div>
 </div>
 
-  </div>
-
-  <div id="iphone-13-section" class="section">
-    <h2 class="head-h2">ClassMate Test</h2>
-  </div>
-
-  <div id="mi-12-section" class="section">
-    <h2 class="head-h2">Sps Register</h2>
-  </div>
-
   <div id="mi-13-section" class="section">
     <h2 class="head-h2">Sps Top</h2>
-  </div>
+    <div class="copy">
+        <div class="top-classmate">
+            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
+            <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 172 Pgs(RULE) Top', 35)" class="top-classmate-price"><del>₹52</del>₹35</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 144 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 192 Pgs Top (RULE)', 30)" class="top-classmate-price"><del>₹52</del> ₹30</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/diary-notebook/w/j/d/classmate-02000221-original-imaeqhyexj8gzxzu.jpeg?q=20&crop=false" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price"><del>₹120</del> ₹80</button>
+        </div>
+      </div><div class="copy">
+        <div class="top-classmate">
+            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
+            <p class="top-classmate-txt">SPS 320 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 320 Pgs(RULE)', 90)" class="top-classmate-price"><del>₹180</del> ₹90</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 400 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 400 Pgs(RULE)', 120)" class="top-classmate-price"><del>₹190</del>₹120</button>
+        </div>
+    </div>
+</div>
 
   <div id="mi-4-section" class="section">
     <h2 class="head-h2">Sps Test</h2>
+    <p style="text-align:center;">Adding Soon...</p>
   </div>
 
   <div id="realme-1-section" class="section">
     <h2 class="head-h2">Ellora Register</h2>
-  </div>
-
+    <div class="copy">
+        <div class="top-classmate">
+            <img src="https://m.media-amazon.com/images/I/713LtC4uB1L._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img">
+            <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 172 Pgs(RULE) Top', 35)" class="top-classmate-price"><del>₹52</del>₹35</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/EA/RW/HW/54256106/ellora-all-is-well-school-notebook.jpg" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 144 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 192 Pgs Top (RULE)', 30)" class="top-classmate-price"><del>₹52</del> ₹30</button>
+        </div>
+        <div class="top-classmate">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/LT/ZF/GN/54256106/ellora-a4-executive-notebook.jpg" style="height: 134px; width: 89px;">
+            <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price" style="width: 89px;"><del>₹120</del> ₹80</button>
+        </div>
+    </div>
+</div>
   <div id="realme-2-section" class="section">
     <h2 class="head-h2">Ellora Top</h2>
-  </div>
+    <p style="text-align: center;">Adding Soon...</p>
+</div>
+  <div id="lenovo-1-section" class="section">
+  <h2 class="head-h2">Nceart</h2>
+  <div class="copy">
+    <div class="top-classmate">
+      <img src="https://www.schoolkart.com/cdn/shop/files/clss12023.webp?v=1688975950" class="top-classmate-img" style="height: 134px;">
+      <p class="top-classmate-txt" style="margin-left: 8px; margin-top: 4px; ">Class 1 Full Set</p>
+      <button onclick="addToCart('Class 1 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.schoolkart.com/cdn/shop/files/Class2Set.webp?v=1691133604" class="top-classmate-img" style="height: 134px;">
+      <p class="top-classmate-txt" style="margin-left: 8px; margin-top: 4px;">Class 2 Full Set</p>
+      <button onclick="addToCart('Class 2 Full Set', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.schoolwaale.com/wp-content/uploads/2019/08/3.2.jpg" style="height: 134px; width: 105px;">
+      <p class="top-classmate-txt">Class 3 Full Set</p>
+      <button onclick="addToCart('Class 3 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+    </div>
+</div>
+<div class="copy">
+    <div class="top-classmate">
+      <img src="https://m.media-amazon.com/images/I/91Huvwqx91L._AC_UF1000,1000_QL80_.jpg" style="height: 134px; width: 105px;">
+      <p class="top-classmate-txt">Class 4 Full Set</p>
+      <button onclick="addToCart('Class 4 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://m.media-amazon.com/images/I/91V0hvgl42L._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img" style="height: 134px;">
+      <p class="top-classmate-txt">Class 5 Full Set</p>
+      <button onclick="addToCart('Class 5 Full Set', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.schoolkart.com/cdn/shop/products/Vasant6.jpg?v=1629268199" style="height: 134px;">
+      <p class="top-classmate-txt">Class 6 Full Set</p>
+      <button onclick="addToCart('Class 6 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+    </div>
+</div>
+<div class="copy">
+    <div class="top-classmate">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/kevpwnk0/regionalbooks/n/8/u/ncert-complete-books-set-for-english-medium-class-7-original-imafvgfm5ykhcupe.jpeg?q=90&crop=false" class="top-classmate-img"style="height: 134px;">
+      <p class="top-classmate-txt">Class 7 Full Set</p>
+      <button onclick="addToCart('Class 7 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.schoolkart.com/cdn/shop/products/Vasant8.jpg?v=1629269782" class="top-classmate-img" style="height: 134px;">
+      <p class="top-classmate-txt">Class 8 Full Set</p>
+      <button onclick="addToCart('Class 8 Full Set', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://www.schoolkart.com/cdn/shop/products/Sparsh9_1024x.jpg?v=1629270911" style="height: 134px; width: 105px;">
+      <p class="top-classmate-txt">Class 9 Full Set</p>
+      <button onclick="addToCart('Class 9 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+    </div>
+</div>
+<div class="copy" style="margin-left: 130px;">
+    <div class="top-classmate">
+      <img src="https://www.schoolkart.com/cdn/shop/products/Kritika10.jpg?v=1629271412" style="height: 134px; width: 105px;">
+      <p class="top-classmate-txt">Class 10 Full Set</p>
+      <button onclick="addToCart('Class 10 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+    </div>
+</div>
+</div>
 
+<div id="lenovo-2-section" class="section">
+  <h2 class="head-h2">GRAMMAR</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
+
+<div id="lenovo-3-section" class="section">
+  <h2 class="head-h2">Story</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
+<div id="asus-1-section" class="section">
+  <h2 class="head-h2">FREEDOM TEST</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
+
+<div id="asus-2-section" class="section">
+  <h2 class="head-h2">FREEDOM REGISTER</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
+
+<div id="asus-3-section" class="section">
+  <h2 class="head-h2">FREEDOM TOP</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
+<div id="acer-1-section" class="section">
+  <h2 class="head-h2">Pencil / Pen</h2>
+  <div class="copy" style="text-align: center;">
+    <div class="top-classmate">
+      <img src="https://m.media-amazon.com/images/I/61ZXN9NGKcL._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img"style="height: 134px; width: 52px;margin-left: 14px;">
+      <p class="top-classmate-txt">Natraj</p>
+      <button onclick="addToCart('Natraj Pencil', 40)" class="top-classmate-price" style="width: 107px;"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://i.ibb.co/QKpsx7N/apsara-box-2-removebg-preview.png" class="top-classmate-img" style="height: 134px; width: 82px;">
+      <p class="top-classmate-txt">Apsara</p>
+      <button onclick="addToCart('Apsara Pencil', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/k1l1ea80/pencil/y/z/w/matt-magic-pencils-apsara-original-imafh4mhydcqu9y8.jpeg?q=20" style="height: 134px; width: 105px; transform: rotate(90deg);">
+      <p class="top-classmate-txt">Neon</p>
+      <button onclick="addToCart('Neon Pencil', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+    </div>
+</div>
+<div class="copy" style="text-align: center; margin-left: px; ">
+    <div class="top-classmate">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/SM/OP/SA/82467052/saino-softek-blue-pens.jpeg" class="top-classmate-img"style="height: 134px;">
+      <p class="top-classmate-txt">Saino softek (BLUE) </p>
+      <button onclick="addToCart('Saino softek (BLUE)', 40)" class="top-classmate-price" style="width: 90px;"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/SM/OP/SA/82467052/saino-softek-blue-pens.jpeg" class="top-classmate-img"style="height: 134px;">
+      <p class="top-classmate-txt">Saino softek (Black)</p>
+      <button onclick="addToCart('Saino softek (Black)', 40)" class="top-classmate-price" style="width: 90px;"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/pen/e/m/4/58375-hauser-germany-original-imagqutpf4tngbv2.jpeg?q=20&crop=false" style="height: 134px; width: 71px;">
+      <p class="top-classmate-txt" style="margin-left: -13px;">Hauser XO 5 (BLUE)</p>
+      <button onclick="addToCart('Hauser XO 5 (BLUE)', 20)" class="top-classmate-price" style="width: 90px; "><del>₹33</del>₹20</button>
+    </div>
+</div>
+<div class="copy" style="text-align: center; margin-left: px; ">
+    <div class="top-classmate">
+      <img src="https://m.media-amazon.com/images/I/61mMEmNWTBL._AC_UF1000,1000_QL80_.jpg"style="height: 134px; width: 94px;">
+      <p class="top-classmate-txt">Pentonic (BLUE) </p>
+      <button onclick="addToCart('Pentonic (BLUE)', 40)" class="top-classmate-price" style="width: 90px;"><del>₹53</del>₹40</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://m.media-amazon.com/images/I/61WKMdxzTIL._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img"style="height: 134px; width: 94px;">
+      <p class="top-classmate-txt">Pentonic (Black)</p>
+      <button onclick="addToCart('Pentonic (Black)', 100)" class="top-classmate-price" style="width: 90px;"><del>₹100</del>₹90</button>
+    </div>
+    <div class="top-classmate">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/pen/e/m/4/58375-hauser-germany-original-imagqutpf4tngbv2.jpeg?q=20&crop=false" style="height: 134px; width: 71px;     margin-left: 30px;">
+      <p class="top-classmate-txt" style="margin-left: 10px;">Hauser XO 5 (BLACK)</p>
+      <button onclick="addToCart('Hauser XO 5 (BLACK)', 20)" class="top-classmate-price" style="width: 90px;     margin-left: 21px;"><del>₹33</del>₹20</button>
+    </div>
+</div>
+</div>
+<div id="acer-2-section" class="section">
+  <h2 class="head-h2">Glue</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
+
+<div id="acer-3-section" class="section">
+  <h2 class="head-h2">Maps / Chart</h2>
+  <p style="text-align: center;">Adding Soon...</p>
+</div>
   <div id="realme-3-section" class="section">
     <h2 class="head-h2">Ellora Test</h2>
+    <p style="text-align: center;">Adding Soon...</p>
+</div>
   </div>
+</div>
 </div>
 <hr>
 <div id="section1">
@@ -513,7 +960,7 @@
     }
 
     function sendDataToGoogleSheets(data) {
-        var url = 'https://script.google.com/macros/s/AKfycbwsBYuuRuRrjuiuAJtHufY0Vl4dCeGcempGcM1twhjEb2W0sNcRo-pD63RZlCpTdABX/exec';
+        var url = 'https://script.google.com/macros/s/AKfycbzhRHYaaPl5rB5nXHpCnOezsPqNDp8slQ6InvDsCV1zNl-EqVySoWworoAdoaD1OMQz/exec';
 
         fetch(url, {
             method: 'POST',
