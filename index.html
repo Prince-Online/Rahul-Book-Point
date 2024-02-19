@@ -921,165 +921,169 @@
     }
 </script>
 <script>
-  let cart = [];
-    let total = 0;
-    let additionalFee = 0;
-    let productQuantities = {};
-    const postalCodes = {
-        "821013": { state: "Goa", city: "Hero" },
-        "827010": { state: "Jharkhand", city: "Bokaro" }
-    };
+let cart = [];
+let total = 0;
+let additionalFee = 0;
+let productQuantities = {};
+const postalCodes = {
+    "821013": { state: "Goa", city: "Hero" },
+    "827010": { state: "Jharkhand", city: "Bokaro" }
+};
 
-    // Load cart data from localStorage on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        loadCartFromLocalStorage();
-        updateCartView();
-    });
+// Load cart data from localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadCartFromLocalStorage();
+    updateCartView();
+});
 
-    // Save cart data to localStorage
-    function saveCartToLocalStorage() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-        localStorage.setItem('total', total.toString());
-        localStorage.setItem('additionalFee', additionalFee.toString());
-        localStorage.setItem('productQuantities', JSON.stringify(productQuantities));
-    }
+// Save cart data to localStorage
+function saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('total', total.toString());
+    localStorage.setItem('additionalFee', additionalFee.toString());
+    localStorage.setItem('productQuantities', JSON.stringify(productQuantities));
+}
 
-    // Load cart data from localStorage
-    function loadCartFromLocalStorage() {
-        const storedCart = localStorage.getItem('cart');
-        const storedTotal = localStorage.getItem('total');
-        const storedAdditionalFee = localStorage.getItem('additionalFee');
-        const storedProductQuantities = localStorage.getItem('productQuantities');
+// Load cart data from localStorage
+function loadCartFromLocalStorage() {
+    const storedCart = localStorage.getItem('cart');
+    const storedTotal = localStorage.getItem('total');
+    const storedAdditionalFee = localStorage.getItem('additionalFee');
+    const storedProductQuantities = localStorage.getItem('productQuantities');
 
-        if (storedCart) {
-            cart = JSON.parse(storedCart);
-            total = parseFloat(storedTotal);
-            additionalFee = parseFloat(storedAdditionalFee);
-            productQuantities = JSON.parse(storedProductQuantities);
-        }
-    }
-
-    function sendDataToGoogleSheets(data) {
-        var url = 'https://script.google.com/macros/s/AKfycbzhRHYaaPl5rB5nXHpCnOezsPqNDp8slQ6InvDsCV1zNl-EqVySoWworoAdoaD1OMQz/exec';
-
-        fetch(url, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        .then(response => console.log('Data sent to Google Sheets:', response))
-        .catch(error => console.error('Error sending data to Google Sheets:', error));
-    }
-
-    function addToCart(productName, price) {
-        cart.push({ name: productName, price: price });
-        total += price;
-
-        if (productQuantities[productName]) {
-            productQuantities[productName]++;
-        } else {
-            productQuantities[productName] = 1;
-        }
-
-        if (total < 300) {
-            additionalFee = 49;
-        } else {
-            additionalFee = 0;
-        }
-
-        updateCartView();
-        saveCartToLocalStorage(); // Save cart data to localStorage
-    }
-
-    function updateCartView() {
-        const cartItems = document.getElementById('cart-items');
-        const cartTotal = document.getElementById('cart-total');
-        const additionalFeeDisplay = document.getElementById('additional-fee');
-
-        cartItems.innerHTML = '';
-        Object.keys(productQuantities).forEach(productName => {
-            const li = document.createElement('li');
-            li.textContent = productName + ' - Rs. ' + cart.find(item => item.name === productName).price + ' (x' + productQuantities[productName] + ')';
-            const removeButton = document.createElement('span');
-            removeButton.textContent = 'Remove';
-            removeButton.className = 'remove-button';
-            removeButton.onclick = function() {
-                removeFromCart(productName);
-            };
-            li.appendChild(removeButton);
-            cartItems.appendChild(li);
-        });
-
-        const totalAmount = total + additionalFee;
-        cartTotal.textContent = totalAmount;
-        additionalFeeDisplay.textContent = additionalFee;
-    }
-
-    function removeFromCart(productName) {
-        const removedItem = cart.find(item => item.name === productName);
-        total -= removedItem.price * productQuantities[productName];
-
-        delete productQuantities[productName];
-
-        if (total < 300) {
-            additionalFee = 49;
-        } else {
-            additionalFee = 0;
-        }
-
-        cart = cart.filter(item => item.name !== productName);
-        updateCartView();
-
-        if (cart.length === 0) {
-            additionalFee = 0;
-            updateCartView();
-        }
-
-        saveCartToLocalStorage(); // Save cart data to localStorage
-    }
-
-    function toggleCart() {
-    const cartDisplay = document.getElementById('cart').style.display;
-    document.getElementById('cart').style.display = cartDisplay === 'none' ? 'block' : 'none';
-    document.getElementById('user-details').style.display = 'none'; // Add this line
-    if (cartDisplay === 'none') {
-        updateCartView();
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+        total = parseFloat(storedTotal);
+        additionalFee = parseFloat(storedAdditionalFee);
+        productQuantities = JSON.parse(storedProductQuantities);
     }
 }
 
+function sendDataToGoogleSheets(data) {
+    var url = 'https://script.google.com/macros/s/AKfycbzAsec0BQkDFfIC8JVSjwjZGhIPBenw2mHA_mF5TvZBVCS7g208DlCcsLqZTKl0X29E/exec';
+    const timestamp = new Date().toLocaleString(); // Add timestamp
 
-    function proceedToCheckout() {
-        document.getElementById('user-details').style.display = 'block';
+    data.timestamp = timestamp; // Add timestamp to the data object
+    data.totalPrice = total; // Add total price to the data object
+    data.additionalFee = additionalFee; // Add additional fee to the data object
+
+    fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => console.log('Data sent to Google Sheets:', response))
+    .catch(error => console.error('Error sending data to Google Sheets:', error));
+}
+
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    total += price;
+
+    if (productQuantities[productName]) {
+        productQuantities[productName]++;
+    } else {
+        productQuantities[productName] = 1;
     }
 
-    function validatePostalCode() {
-        const postalCodeInput = document.getElementById('postal-code');
-        const postalCode = postalCodeInput.value.trim();
-        if (!/^\d{6}$/.test(postalCode)) {
-            alert("Postal code must contain 6 numbers.");
-            postalCodeInput.value = "";
-            return;
-        }
-        fillAddress(postalCode);
+    if (total < 300) {
+        additionalFee = 49;
+    } else {
+        additionalFee = 0;
     }
 
-    function fillAddress(postalCode) {
-        const stateInput = document.getElementById('state');
-        const cityInput = document.getElementById('city');
-        if (postalCode in postalCodes) {
-            stateInput.value = postalCodes[postalCode].state;
-            cityInput.value = postalCodes[postalCode].city;
-        } else {
-            stateInput.value = "";
-            cityInput.value = "";
-            alert("Postal code not found.");
-        }
+    updateCartView();
+    saveCartToLocalStorage(); // Save cart data to localStorage
+}
+
+function updateCartView() {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const additionalFeeDisplay = document.getElementById('additional-fee');
+
+    cartItems.innerHTML = '';
+    Object.keys(productQuantities).forEach(productName => {
+        const li = document.createElement('li');
+        li.textContent = productName + ' - Rs. ' + cart.find(item => item.name === productName).price + ' (x' + productQuantities[productName] + ')';
+        const removeButton = document.createElement('span');
+        removeButton.textContent = 'Remove';
+        removeButton.className = 'remove-button';
+        removeButton.onclick = function() {
+            removeFromCart(productName);
+        };
+        li.appendChild(removeButton);
+        cartItems.appendChild(li);
+    });
+
+    const totalAmount = total + additionalFee;
+    cartTotal.textContent = totalAmount;
+    additionalFeeDisplay.textContent = additionalFee;
+}
+
+function removeFromCart(productName) {
+    const removedItem = cart.find(item => item.name === productName);
+    total -= removedItem.price * productQuantities[productName];
+
+    delete productQuantities[productName];
+
+    if (total < 300) {
+        additionalFee = 49;
+    } else {
+        additionalFee = 0;
     }
 
-    function placeOrder() {
+    cart = cart.filter(item => item.name !== productName);
+    updateCartView();
+
+    if (cart.length === 0) {
+        additionalFee = 0;
+        updateCartView();
+    }
+
+    saveCartToLocalStorage(); // Save cart data to localStorage
+}
+
+function toggleCart() {
+const cartDisplay = document.getElementById('cart').style.display;
+document.getElementById('cart').style.display = cartDisplay === 'none' ? 'block' : 'none';
+document.getElementById('user-details').style.display = 'none'; // Add this line
+if (cartDisplay === 'none') {
+    updateCartView();
+}
+}
+
+function proceedToCheckout() {
+    document.getElementById('user-details').style.display = 'block';
+}
+
+function validatePostalCode() {
+    const postalCodeInput = document.getElementById('postal-code');
+    const postalCode = postalCodeInput.value.trim();
+    if (!/^\d{6}$/.test(postalCode)) {
+        alert("Postal code must contain 6 numbers.");
+        postalCodeInput.value = "";
+        return;
+    }
+    fillAddress(postalCode);
+}
+
+function fillAddress(postalCode) {
+    const stateInput = document.getElementById('state');
+    const cityInput = document.getElementById('city');
+    if (postalCode in postalCodes) {
+        stateInput.value = postalCodes[postalCode].state;
+        cityInput.value = postalCodes[postalCode].city;
+    } else {
+        stateInput.value = "";
+        cityInput.value = "";
+        alert("Postal code not found.");
+    }
+}
+
+function placeOrder() {
     const name = document.getElementById('name').value;
     const mobile = document.getElementById('mobile').value;
     const postalCode = document.getElementById('postal-code').value;
