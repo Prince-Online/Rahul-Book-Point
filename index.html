@@ -184,12 +184,15 @@
   }
   .top-classmate-txt{
     font-size: 13px;
+    text-align: center;
+    width: 100px;
   }
   .top-classmate{
     background: transparent;
     display: grid;
     margin-left: 5%;
     margin-top: 4%;
+    margin-right: 3.9%;
     justify-items: stretch;
   }
   .copy{
@@ -225,6 +228,9 @@
     justify-content: center;
     align-items: center;
     left: 65px;
+    }
+    .copy{
+      justify-content: center;
     }
 }
 </style>
@@ -280,12 +286,12 @@
 <div class="products">
   <select id="first-box" onchange="showSecondBox()">
     <option value="">Select Brand</option>
-    <option value="apple">Classmate</option>
-    <option value="mi">Sps</option>
-    <option value="realme">Ellora</option>
+    <option value="apple">Copy</option>
+    <option value="mi">Colour</option>
+    <option value="realme">Boxes</option>
     <option value="lenovo">Books</option>
-    <option value="asus">Freedom</option>
-    <option value="acer">Rahul Book Point Extra</option>
+    <option value="asus">Files</option>
+    <option value="acer">Other</option>
   </select>
 <div id="lenovo" class="second-box">
   <select id="lenovo-models" onchange="showSections('lenovo')">
@@ -298,9 +304,9 @@
 <div id="asus" class="second-box">
   <select id="asus-models" onchange="showSections('asus')">
     <option value="">Select Model</option>
-    <option value="asus-1">Test Copy</option>
-    <option value="asus-2">Register</option>
-    <option value="asus-3">Top</option>
+    <option value="asus-1">Stick File</option>
+    <option value="asus-2">Pocket File</option>
+    <option value="asus-3">Paper File</option>
   </select>
 </div>
 <div id="acer" class="second-box">
@@ -314,31 +320,31 @@
   <div id="apple" class="second-box">
     <select id="apple-models" onchange="showSections('apple')">
       <option value="">Select Model</option>
-      <option value="iphone-x">ClassMate Register</option>
-      <option value="iphone-12">ClassMate Top</option>
-      <option value="iphone-13">ClassMate Test</option>
+      <option value="iphone-x">Register</option>
+      <option value="iphone-12">Top</option>
+      <option value="iphone-13">Test</option>
     </select>
   </div>
 
   <div id="mi" class="second-box">
     <select id="mi-models" onchange="showSections('mi')">
       <option value="">Select Model</option>
-      <option value="mi-12">Sps Register</option>
-      <option value="mi-13">Sps Top</option>
-      <option value="mi-4">Sps Test</option>
+      <option value="mi-12">Plastic Crayons</option>
+      <option value="mi-13">Oil Pastel</option>
+      <option value="mi-4">Pencil Colour</option>
     </select>
   </div>
 
   <div id="realme" class="second-box">
     <select id="realme-models" onchange="showSections('realme')">
       <option value="">Select Model</option>
-      <option value="realme-1">Ellora Register</option>
-      <option value="realme-2">Ellora Top</option>
-      <option value="realme-3">Ellora Test</option>
+      <option value="realme-1">Pencil Box</option>
+      <option value="realme-2">Geometry Box</option>
+      <option value="realme-3">Zipper</option>
     </select>
   </div>
   <div id="iphone-x-section" class="section">
-    <h2 class="head-h2">ClassMate Register</h2>
+    <h2 class="head-h2">Register Size Copy</h2>
     <div class="copy">
     <div class="top-classmate">
       <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
@@ -356,130 +362,235 @@
       <button onclick="addToCart('Classmate 172 Pgs REG', 120)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
 </div>
+<div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/VvJd0v9/3.jpg" class="top-classmate-img" style="height: 134px;">
+        <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
+        <button onclick="addToCart('SPS 172 Pgs(RULE)', 50)" class="top-classmate-price"><del>₹84</del> ₹50</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/TBdDwQF/4.jpg" class="top-classmate-img" style="height: 134px;">
+        <p class="top-classmate-txt">SPS 192 Pgs(RULE)</p>
+        <button onclick="addToCart('SPS 192 Pgs(RULE)', 60)" class="top-classmate-price" ><del>₹82</del> ₹60</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/rcfLVH3/5.jpg" style="height: 134px;">
+        <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
+        <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price"><del>₹120</del> ₹80</button>
+    </div>
+</div>
+<div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/qDxxTGY/6.jpg" class="top-classmate-img" style="height: 134px;">
+        <p class="top-classmate-txt">SPS 320 Pgs(RULE)</p>
+        <button onclick="addToCart('SPS 320 Pgs(RULE)', 90)" class="top-classmate-price"><del>₹180</del> ₹90</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/wy8tFt1/7.jpg" class="top-classmate-img" style="height: 134px;">
+        <p class="top-classmate-txt">SPS 400 Pgs(RULE)</p>
+        <button onclick="addToCart('SPS 400 Pgs(RULE)', 120)" class="top-classmate-price"><del>₹190</del> ₹120</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://m.media-amazon.com/images/I/713LtC4uB1L._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img">
+        <p class="top-classmate-txt">Ellora 172 Pgs (RULE)</p>
+        <button onclick="addToCart('Ellora 172 Pgs (RULE)', 35)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
+    </div>
+</div>
+<div class="copy">
+    <div class="top-classmate">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/EA/RW/HW/54256106/ellora-all-is-well-school-notebook.jpg" style="height: 134px;">
+        <p class="top-classmate-txt">Ellora 144 Pgs (RULE)</p>
+        <button onclick="addToCart('Ellora 144 Pgs (RULE)', 30)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/LT/ZF/GN/54256106/ellora-a4-executive-notebook.jpg" style="height: 134px; width: 89px;">
+        <p class="top-classmate-txt">Ellora 240 Pgs (RULE)</p>
+        <button onclick="addToCart('Ellora 240 Pgs (RULE)', 80)" class="top-classmate-price" style="width: 89px;" disabled><del>Out Of Stock</del></button>
+    </div>
+</div>
   </div>
 
   <div id="iphone-12-section" class="section">
-    <h2 class="head-h2">ClassMate Top</h2>
-    <div class="copy">
+    <h2 class="head-h2">Top Size Copy</h2>
+    <div class="copy" style="justify-content: center;">
     <div class="top-classmate">
-      <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
+      <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img" style="width: 125px;">
       <p class="top-classmate-txt">Classmate 172 Pgs (RULE)</p>
-      <button onclick="addToCart('Classmate 172 Pgs Top (RULE)', 45)" class="top-classmate-price" style="width: 86px;"><del>₹55</del>₹45</button>
+      <button onclick="addToCart('Classmate 172 Pgs Top (RULE)', 45)" class="top-classmate-price" style="width: 130px;"><del>₹55</del>₹45</button>
     </div>
     <div class="top-classmate">
-      <img src="https://www.bigbasket.com/media/uploads/p/l/278811_3-classmate-notebook-long-unruled-33x21cm.jpg" class="top-classmate-img">
+      <img src="https://www.bigbasket.com/media/uploads/p/l/278811_3-classmate-notebook-long-unruled-33x21cm.jpg" class="top-classmate-img" style="width: 125px;">
       <p class="top-classmate-txt">Classmate 120 Pgs (RULE)</p>
-      <button onclick="addToCart('Classmate 120 Pgs Top (RULE)', 30)" class="top-classmate-price" style="width: 86px;"><del>₹35</del>₹30</button>
+      <button onclick="addToCart('Classmate 120 Pgs Top (RULE)', 30)" class="top-classmate-price" style="width: 130px;"><del>₹35</del>₹30</button>
     </div>
 </div>
+<div class="copy" style="justify-content: center;">
+        <div class="top-classmate" style="margin-left: 24px;">
+            <img src="https://rukminim2.flixcart.com/image/416/416/kpodocw0/diary-notebook/s/f/f/regular-1824-sps-original-imag3uxmxfaqfebx.jpeg?q=70&crop=false" class="top-classmate-img" style="height: 134px;">
+            <p class="top-classmate-txt">SPS 144 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 144 Pgs Top (RULE)', 30)" class="top-classmate-price"><del>₹48</del> ₹30</button>
+        </div>
+        <div class="top-classmate" style="margin-left: 60px;">
+            <img src="https://i.ibb.co/L57wC6Q/images.jpg" style="height: 134px; width: 109px;">
+            <p class="top-classmate-txt">SPS 144 Pgs(RULE)</p>
+            <button onclick="addToCart('SPS 144 Pgs(RULE)', 35)" class="top-classmate-price"><del>₹52</del> ₹35</button>
+        </div>
+      </div><div class="copy">
+    </div>
 </div>
   <div id="iphone-13-section" class="section">
     <h2 class="head-h2">ClassMate Test</h2>
     <div class="copy">
-    <div class="top-classmate">
+    <div class="top-classmate" style="margin-left: 60px;">
       <img src="https://www.haridwarmart.com/wp-content/uploads/2020/01/classmate-register_.jpg" class="top-classmate-img">
-      <p class="top-classmate-txt">Classmate 96 Pgs (RULE)</p>
+      <p class="top-classmate-txt" style="width: 104px;">Classmate 96 Pgs (RULE)</p>
       <button onclick="addToCart('Classmate 96 Pgs Test (RULE)', 17)" class="top-classmate-price" style="width: 68px; margin-left: 20px;"><del>₹20</del>₹17</button>
     </div>
     <div class="top-classmate">
       <img src="https://www.bigbasket.com/media/uploads/p/l/278811_3-classmate-notebook-long-unruled-33x21cm.jpg" class="top-classmate-img">
-      <p class="top-classmate-txt">Classmate 40 Pgs (RULE)</p>
+      <p class="top-classmate-txt" style="width: 104px;">Classmate 40 Pgs (RULE)</p>
       <button onclick="addToCart('Classmate 40 Pgs (RULE) Test', 60)" class="top-classmate-price" style="width: 68px; margin-left: 20px;">₹10</button>
     </div>
   </div>
 </div>
 <div id="mi-12-section" class="section">
-    <h2 class="head-h2">Sps Register</h2>
+    <h2 class="head-h2">Plastic Crayons</h2>
     <div class="copy">
-        <div class="top-classmate">
-            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
-            <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 172 Pgs(RULE)', 50)" class="top-classmate-price"><del>₹84</del> ₹50</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 192 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 192 Pgs(RULE)', 60)" class="top-classmate-price" ><del>₹82</del> ₹60</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://rukminim2.flixcart.com/image/850/1000/diary-notebook/w/j/d/classmate-02000221-original-imaeqhyexj8gzxzu.jpeg?q=20&crop=false" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price"><del>₹120</del> ₹80</button>
-        </div>
-      </div><div class="copy">
-        <div class="top-classmate">
-            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
-            <p class="top-classmate-txt">SPS 320 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 320 Pgs(RULE)', 90)" class="top-classmate-price"><del>₹180</del> ₹90</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 400 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 400 Pgs(RULE)', 120)" class="top-classmate-price"><del>₹190</del> ₹120</button>
-        </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/FVXWvZt/3.jpg" class="top-classmate-img" style="height: 68px;">
+        <p class="top-classmate-txt">DOMS 14 Shades</p>
+        <button onclick="addToCart('DOMS 14 Shades', 14)" class="top-classmate-price">₹14</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/02BNdZ1/4.jpg" class="top-classmate-img" style="height: 68px;">
+        <p class="top-classmate-txt">DOMS 12 Shades</p>
+        <button onclick="addToCart('DOMS 12 Shades', 12)" class="top-classmate-price">₹12</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/GFSxm4x/6.jpg" class="top-classmate-img" style="height: 68px;">
+        <p class="top-classmate-txt">Camel 12 Shades</p>
+        <button onclick="addToCart('Camel 12 Shades', 10)" class="top-classmate-price">₹10</button>
     </div>
 </div>
-
-  <div id="mi-13-section" class="section">
-    <h2 class="head-h2">Sps Top</h2>
-    <div class="copy">
-        <div class="top-classmate">
-            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
-            <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 172 Pgs(RULE) Top', 35)" class="top-classmate-price"><del>₹52</del>₹35</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 144 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 192 Pgs Top (RULE)', 30)" class="top-classmate-price"><del>₹52</del> ₹30</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://rukminim2.flixcart.com/image/850/1000/diary-notebook/w/j/d/classmate-02000221-original-imaeqhyexj8gzxzu.jpeg?q=20&crop=false" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price"><del>₹120</del> ₹80</button>
-        </div>
-      </div><div class="copy">
-        <div class="top-classmate">
-            <img src="https://cdn11.bigcommerce.com/s-ewvorh6rf3/images/stencil/500x659/products/2939/4729/Classmate_Oriya_ruling_copy__34422.1643012808.JPG?c=1" class="top-classmate-img">
-            <p class="top-classmate-txt">SPS 320 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 320 Pgs(RULE)', 90)" class="top-classmate-price"><del>₹180</del> ₹90</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://m.media-amazon.com/images/I/51xEYQF0BoL.jpg" class="top-classmate-img" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 400 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 400 Pgs(RULE)', 120)" class="top-classmate-price"><del>₹190</del>₹120</button>
-        </div>
+<div class="copy" style="justify-content: center;">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/TRpyV4T/7.jpg" class="top-classmate-img" style="height: 98px;">
+        <p class="top-classmate-txt">Camel 24 Shades</p>
+        <button onclick="addToCart('Camel 24 Shades', 25)" class="top-classmate-price">₹25</button>
     </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/zb1WKg5/18.png" class="top-classmate-img" style="height: 98px;">
+        <p class="top-classmate-txt">Doms 12 Shades</p>
+        <button onclick="addToCart('Doms 12 Shades (Circle Box))', 14)" class="top-classmate-price"><del>₹50</del> ₹35</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/WWyyNKp/19.png" class="top-classmate-img" style="height: 98px;">
+        <p class="top-classmate-txt">Camel 12 Shades</p>
+        <button onclick="addToCart('Camel 12 Shades (Circle Box)', 14)" class="top-classmate-price"><del>₹50</del> ₹35</button>
+    </div>
+  </div>
+<div class="copy" style="justify-content: center;">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/L0RYzQN/20.png" class="top-classmate-img" style="height: 98px;">
+        <p class="top-classmate-txt">Doms 24 Shades</p>
+        <button onclick="addToCart('Doms 24 Shades (Big Circle Box)', 25)" class="top-classmate-price">₹25</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/MVTc5XT/21.png" class="top-classmate-img" style="height: 98px;">
+        <p class="top-classmate-txt">Doms 12 Shades</p>
+        <button onclick="addToCart('Doms 12 Shades (Big Circle Box))', 14)" class="top-classmate-price"><del>₹50</del> ₹35</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/ry1q84S/22.png" class="top-classmate-img" style="height: 98px;">
+        <p class="top-classmate-txt">Faber Castel 12 Shades</p>
+        <button onclick="addToCart('Faber Castel 12 Shades (Circle Box)', 14)" class="top-classmate-price"><del>₹50</del> ₹35</button>
+    </div>
+  </div>
+</div>
+  <div id="mi-13-section" class="section">
+    <h2 class="head-h2">Oil Pastel</h2>
+    <div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/3dpFdYJ/15.jpg" class="top-classmate-img" style="height: 168px;">
+        <p class="top-classmate-txt">Camel Plastic Box 24 Shades</p>
+        <button onclick="addToCart('Camel Plastic Box 24 Shades (Oil Pastel)', 14)" class="top-classmate-price"><del>₹50</del> ₹14</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/vLL5s5P/16.jpg" class="top-classmate-img" style="height: 168px;">
+        <p class="top-classmate-txt">Camel 24 Shades</p>
+        <button onclick="addToCart('Camel 24 Shades (Oil Pastel)', 12)" class="top-classmate-price"><del>₹50</del> ₹12</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/MDTBsbT/17.jpg" class="top-classmate-img" style="height: 168px;">
+        <p class="top-classmate-txt">Faber Castel 24 Shades</p>
+        <button onclick="addToCart('Faber Castel 24 Shades (Oil Pastel)', 10)" class="top-classmate-price"><del>₹50</del> ₹10</button>
+    </div>
+</div>
+<div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/gyBTNDj/14.jpg" class="top-classmate-img" style="width: 100%;transform: rotate(270deg);height: 103px;">
+        <p class="top-classmate-txt">Camel 12 Shades</p>
+        <button onclick="addToCart('Camel 12 Shades (Oil Pastel)', 14)" class="top-classmate-price"><del>₹50</del> ₹35</button>
+    </div>
+
+</div>
 </div>
 
   <div id="mi-4-section" class="section">
-    <h2 class="head-h2">Sps Test</h2>
-    <p style="text-align:center;">Adding Soon...</p>
-  </div>
-
-  <div id="realme-1-section" class="section">
-    <h2 class="head-h2">Ellora Register</h2>
+    <h2 class="head-h2">Pencil Colour</h2>
     <div class="copy">
-        <div class="top-classmate">
-            <img src="https://m.media-amazon.com/images/I/713LtC4uB1L._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img">
-            <p class="top-classmate-txt">SPS 172 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 172 Pgs(RULE) Top', 35)" class="top-classmate-price"><del>₹52</del>₹35</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/EA/RW/HW/54256106/ellora-all-is-well-school-notebook.jpg" style="height: 134px;">
-            <p class="top-classmate-txt">SPS 144 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 192 Pgs Top (RULE)', 30)" class="top-classmate-price"><del>₹52</del> ₹30</button>
-        </div>
-        <div class="top-classmate">
-            <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/LT/ZF/GN/54256106/ellora-a4-executive-notebook.jpg" style="height: 134px; width: 89px;">
-            <p class="top-classmate-txt">SPS 240 Pgs(RULE)</p>
-            <button onclick="addToCart('SPS 240 Pgs(RULE)', 80)" class="top-classmate-price" style="width: 89px;"><del>₹120</del> ₹80</button>
-        </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/xFqTfx8/2.jpg" class="top-classmate-img" style="height: 168px;">
+        <p class="top-classmate-txt">NatRaj Colour Pencil 12 Shades</p>
+        <button onclick="addToCart('NatRaj Colour Pencil 12 Shades', 14)" class="top-classmate-price"><del>₹50</del> ₹14</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/XVNMjQP/5.jpg" class="top-classmate-img" style="height: 168px;">
+        <p class="top-classmate-txt">Colour Pencil 12 Shades</p>
+        <button onclick="addToCart('Colour Pencil 12 Shades', 12)" class="top-classmate-price"><del>₹50</del> ₹12</button>
+    </div>
+  </div>
+  </div>
+  <div id="realme-1-section" class="section">
+    <h2 class="head-h2">Pencil Box</h2>
+    <p style="text-align: center;">Adding Soon...</p>
+    </div>
+  <div id="realme-2-section" class="section">
+    <h2 class="head-h2">Geometry Box</h2>
+    <div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/4T7WQvX/8.jpg" class="top-classmate-img" style="height: 60px;">
+        <p class="top-classmate-txt">Camel Scholar Basics</p>
+        <button onclick="addToCart('Camel Scholar Basics', 14)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/18g25Fz/9.jpg" class="top-classmate-img" style="height: 60px;">
+        <p class="top-classmate-txt">Classmate Victor Box</p>
+        <button onclick="addToCart('Classmate Victor Box', 12)" class="top-classmate-price"><del>₹50</del> ₹12</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/9gCfL9R/10.jpg" class="top-classmate-img" style="height: 60px;">
+        <p class="top-classmate-txt">Natraj Original Box</p>
+        <button onclick="addToCart('Natraj Original Box', 10)" class="top-classmate-price"><del>₹50</del> ₹10</button>
     </div>
 </div>
-  <div id="realme-2-section" class="section">
-    <h2 class="head-h2">Ellora Top</h2>
-    <p style="text-align: center;">Adding Soon...</p>
+<div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/PN8TFZ8/11.jpg" class="top-classmate-img" style="height: 60px;">
+        <p class="top-classmate-txt">Youva Vertex Box</p>
+        <button onclick="addToCart('Youva Vertex Box', 14)" class="top-classmate-price"><del>₹50</del> ₹14</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/Fqhzj90/12.jpg" class="top-classmate-img" style="height: 60px;">
+        <p class="top-classmate-txt">Natraj Original Mathematical </p>
+        <button onclick="addToCart('Natraj Mathematical Instruments', 12)" class="top-classmate-price"><del>₹50</del> ₹12</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/NFHpJx0/13.jpg" class="top-classmate-img" style="height: 60px;">
+        <p class="top-classmate-txt">ClassMate Invento Box</p>
+        <button onclick="addToCart('ClassMate Invento Box', 10)" class="top-classmate-price"><del>₹50</del> ₹10</button>
+    </div>
+</div>
 </div>
   <div id="lenovo-1-section" class="section">
   <h2 class="head-h2">Nceart</h2>
@@ -534,7 +645,7 @@
       <button onclick="addToCart('Class 9 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
     </div>
 </div>
-<div class="copy" style="margin-left: 130px;">
+<div class="copy">
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/products/Kritika10.jpg?v=1629271412" style="height: 134px; width: 105px;">
       <p class="top-classmate-txt">Class 10 Full Set</p>
@@ -553,17 +664,17 @@
   <p style="text-align: center;">Adding Soon...</p>
 </div>
 <div id="asus-1-section" class="section">
-  <h2 class="head-h2">FREEDOM TEST</h2>
+  <h2 class="head-h2">Stick File</h2>
   <p style="text-align: center;">Adding Soon...</p>
 </div>
 
 <div id="asus-2-section" class="section">
-  <h2 class="head-h2">FREEDOM REGISTER</h2>
+  <h2 class="head-h2">Pocket File</h2>
   <p style="text-align: center;">Adding Soon...</p>
 </div>
 
 <div id="asus-3-section" class="section">
-  <h2 class="head-h2">FREEDOM TOP</h2>
+  <h2 class="head-h2">Paper File</h2>
   <p style="text-align: center;">Adding Soon...</p>
 </div>
 <div id="acer-1-section" class="section">
@@ -582,7 +693,7 @@
     <div class="top-classmate">
       <img src="https://rukminim2.flixcart.com/image/850/1000/k1l1ea80/pencil/y/z/w/matt-magic-pencils-apsara-original-imafh4mhydcqu9y8.jpeg?q=20" style="height: 134px; width: 105px; transform: rotate(90deg);">
       <p class="top-classmate-txt">Neon</p>
-      <button onclick="addToCart('Neon Pencil', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+      <button onclick="addToCart('Neon Pencil', 55)" class="top-classmate-price"><del>₹60</del>₹55</button>
     </div>
 </div>
 <div class="copy" style="text-align: center; margin-left: px; ">
@@ -630,7 +741,7 @@
   <p style="text-align: center;">Adding Soon...</p>
 </div>
   <div id="realme-3-section" class="section">
-    <h2 class="head-h2">Ellora Test</h2>
+    <h2 class="head-h2">Zipper</h2>
     <p style="text-align: center;">Adding Soon...</p>
 </div>
   </div>
