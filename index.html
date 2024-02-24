@@ -311,6 +311,7 @@
 
 <form id="user-details" style="display: none;">
     <input type="text" id="name" name="name" placeholder="Name:" required class="int"><br>
+    <input type="email" id="email" name="email" required placeholder="Email:" class="int"><br>
     <input type="number" id="mobile" name="mobile" placeholder="Mobile No.:" required class="int"><br>
     <input type="number" id="postal-code" maxlength="6" name="postal-code" onchange="validatePostalCode()" placeholder="Postal Code:" required class="int"><br>
     <input type="text" id="state" name="state" readonly placeholder="State:" required class="int"><br>
@@ -325,6 +326,7 @@
     <input type="text" id="name" name="name" placeholder="Name:" required class="int"><br>
     <input type="number" id="mobile" name="mobile" placeholder="Mobile No.:" required class="int"><br>
     <input type="number" id="postal-code" maxlength="6" name="postal-code" onchange="validatePostalCode()" placeholder="Postal Code:" required class="int"><br>
+
     <input type="text" id="state" name="state" readonly placeholder="State:" required class="int"><br>
     <input type="text" id="city" name="city" readonly placeholder="City:" required class="int"><br>
     <input type="text" id="road-lane" name="road-lane" placeholder="Road Lane:" required class="int"><br><br>
@@ -1021,7 +1023,7 @@ function loadCartFromLocalStorage() {
 }
 
 function sendDataToGoogleSheets(data) {
-    var url = 'https://script.google.com/macros/s/AKfycbxc24YOpV0mOyFlKkoIKb7ediyqWNLVXwPvQrczAZVF_VmOqMPkLsxicxD9cxBPQKlj/exec';
+    var url = 'https://script.google.com/macros/s/AKfycbyFKGYP4X2W1fh3qSACzlEwM5xJoKmgpdLOtXVWA-xCwhGmWezngbC9xhglyGk0OUqc/exec';
     const timestamp = new Date().toLocaleString(); // Add timestamp
 
     data.timestamp = timestamp; // Add timestamp to the data object
@@ -1173,6 +1175,7 @@ function fillAddress(postalCode) {
 
 function placeOrder() {
     const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
     const mobile = document.getElementById('mobile').value;
     const postalCode = document.getElementById('postal-code').value;
     const state = document.getElementById('state').value;
@@ -1180,7 +1183,7 @@ function placeOrder() {
     const roadLane = document.getElementById('road-lane').value;
 
     // Check if any required field is empty
-    if (!name || !mobile || !postalCode || !state || !city || !roadLane) {
+    if (!name || !email || !mobile || !postalCode || !state || !city || !roadLane) {
         showAlert("Please fill in all required fields.");
         return;
     }
@@ -1193,6 +1196,7 @@ function placeOrder() {
 
     const orderDetails = {
         name: name,
+        email: email,
         mobile: mobile,
         postalCode: postalCode,
         state: state,
