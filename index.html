@@ -228,6 +228,57 @@
     align-items: center;
     left: 65px;
     }
+    #alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+}
+
+.alert {
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.6s;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+}
+
+.alert-info {
+    background-color: #2196F3;
+}
+
+.alert-warning {
+    background-color: #ff9800;
+}
+
+.alert-danger {
+    background-color: #f44336;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
     .copy{
       justify-content: center;
     }
@@ -283,6 +334,7 @@
 </div>
 <hr>
 <div class="products">
+  <div id="alert-container"></div>
   <select id="first-box" onchange="showSecondBox()">
     <option value="">Select Category</option>
     <option value="apple">Copy</option>
@@ -296,8 +348,6 @@
   <select id="lenovo-models" onchange="showSections('lenovo')">
     <option value="">Select Product</option>
     <option value="lenovo-1">Nceart</option>
-    <option value="lenovo-2">Grammar</option>
-    <option value="lenovo-3">Story</option>
   </select>
 </div>
 <div id="asus" class="second-box">
@@ -313,7 +363,6 @@
     <option value="">Select Product</option>
     <option value="acer-1">Pencil / Pen</option>
     <option value="acer-2">Glue</option>
-    <option value="acer-3">Maps / Chart</option>
   </select>
 </div>
   <div id="apple" class="second-box">
@@ -337,7 +386,6 @@
   <div id="realme" class="second-box">
     <select id="realme-models" onchange="showSections('realme')">
       <option value="">Select Product</option>
-      <option value="realme-1">Pencil Box</option>
       <option value="realme-2">Geometry Box</option>
       <option value="realme-3">Zipper</option>
     </select>
@@ -596,59 +644,59 @@
   <div class="copy">
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/files/clss12023.webp?v=1688975950" class="top-classmate-img" style="height: 134px;">
-      <p class="top-classmate-txt" style="margin-left: 8px; margin-top: 4px; ">Class 1 Full Set</p>
-      <button onclick="addToCart('Class 1 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+      <p class="top-classmate-txt" style=" margin-top: 4px; ">Class 1 Full Set</p>
+      <button onclick="addToCart('Class 1 Full Set', 40)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/files/Class2Set.webp?v=1691133604" class="top-classmate-img" style="height: 134px;">
-      <p class="top-classmate-txt" style="margin-left: 8px; margin-top: 4px;">Class 2 Full Set</p>
-      <button onclick="addToCart('Class 2 Full Set', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+      <p class="top-classmate-txt" style=" margin-top: 4px;">Class 2 Full Set</p>
+      <button onclick="addToCart('Class 2 Full Set', 60)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
     <div class="top-classmate">
       <img src="https://www.schoolwaale.com/wp-content/uploads/2019/08/3.2.jpg" style="height: 134px; width: 105px;">
       <p class="top-classmate-txt">Class 3 Full Set</p>
-      <button onclick="addToCart('Class 3 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+      <button onclick="addToCart('Class 3 Full Set', 20)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
 </div>
 <div class="copy">
     <div class="top-classmate">
       <img src="https://m.media-amazon.com/images/I/91Huvwqx91L._AC_UF1000,1000_QL80_.jpg" style="height: 134px; width: 105px;">
       <p class="top-classmate-txt">Class 4 Full Set</p>
-      <button onclick="addToCart('Class 4 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+      <button onclick="addToCart('Class 4 Full Set', 40)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
     <div class="top-classmate">
       <img src="https://m.media-amazon.com/images/I/91V0hvgl42L._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img" style="height: 134px;">
       <p class="top-classmate-txt">Class 5 Full Set</p>
-      <button onclick="addToCart('Class 5 Full Set', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+      <button onclick="addToCart('Class 5 Full Set', 60)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/products/Vasant6.jpg?v=1629268199" style="height: 134px;">
       <p class="top-classmate-txt">Class 6 Full Set</p>
-      <button onclick="addToCart('Class 6 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+      <button onclick="addToCart('Class 6 Full Set', 20)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
 </div>
 <div class="copy">
     <div class="top-classmate">
       <img src="https://rukminim2.flixcart.com/image/850/1000/kevpwnk0/regionalbooks/n/8/u/ncert-complete-books-set-for-english-medium-class-7-original-imafvgfm5ykhcupe.jpeg?q=90&crop=false" class="top-classmate-img"style="height: 134px;">
       <p class="top-classmate-txt">Class 7 Full Set</p>
-      <button onclick="addToCart('Class 7 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+      <button onclick="addToCart('Class 7 Full Set', 40)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/products/Vasant8.jpg?v=1629269782" class="top-classmate-img" style="height: 134px;">
       <p class="top-classmate-txt">Class 8 Full Set</p>
-      <button onclick="addToCart('Class 8 Full Set', 60)" class="top-classmate-price"><del>₹73</del>₹60</button>
+      <button onclick="addToCart('Class 8 Full Set', 60)" class="top-classmate-price" disabled><del>Out Of Stock </del></button>
     </div>
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/products/Sparsh9_1024x.jpg?v=1629270911" style="height: 134px; width: 105px;">
       <p class="top-classmate-txt">Class 9 Full Set</p>
-      <button onclick="addToCart('Class 9 Full Set', 20)" class="top-classmate-price"><del>₹33</del>₹20</button>
+      <button onclick="addToCart('Class 9 Full Set', 20)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
 </div>
 <div class="copy">
     <div class="top-classmate">
       <img src="https://www.schoolkart.com/cdn/shop/products/Kritika10.jpg?v=1629271412" style="height: 134px; width: 105px;">
       <p class="top-classmate-txt">Class 10 Full Set</p>
-      <button onclick="addToCart('Class 10 Full Set', 40)" class="top-classmate-price"><del>₹53</del>₹40</button>
+      <button onclick="addToCart('Class 10 Full Set', 40)" class="top-classmate-price" disabled><del>Out Of Stock</del></button>
     </div>
 </div>
 </div>
@@ -659,7 +707,7 @@
 </div>
 
 <div id="lenovo-3-section" class="section">
-  <h2 class="head-h2">Story</h2>
+  <h2 class="head-h2">Guide</h2>
   <p style="text-align: center;">Adding Soon...</p>
 </div>
 <div id="asus-1-section" class="section">
@@ -817,7 +865,18 @@
 </div>
   <div id="realme-3-section" class="section">
     <h2 class="head-h2">Zipper</h2>
-    <p style="text-align: center;">Adding Soon...</p>
+    <div class="copy">
+    <div class="top-classmate">
+        <img src="https://i.ibb.co/7gJNfxn/53.jpg" class="top-classmate-img" style="height: auto;">
+        <p class="top-classmate-txt">Zipper Bag Plastic</p>
+        <button onclick="addToCart('Zipper Bag Plastic', 20)" class="top-classmate-price"><del>₹30</del> ₹20</button>
+    </div>
+    <div class="top-classmate">
+        <img src="https://m.media-amazon.com/images/I/91oEp3bf-wL._AC_UF1000,1000_QL80_.jpg" class="top-classmate-img" style="height: auto;">
+        <p class="top-classmate-txt">Zipper Bag Plastic (With Net)</p>
+        <button onclick="addToCart('Zipper Bag Plastic (With Net', 60)" class="top-classmate-price"><del>₹80</del> ₹60</button>
+    </div>
+  </div>
 </div>
   </div>
 </div>
@@ -920,7 +979,7 @@
     }
 </script>
 <script>
-  let cart = [];
+let cart = [];
 let total = 0;
 let additionalFee = 0;
 let productQuantities = {};
@@ -979,6 +1038,17 @@ function sendDataToGoogleSheets(data) {
     })
     .then(response => console.log('Data sent to Google Sheets:', response))
     .catch(error => console.error('Error sending data to Google Sheets:', error));
+}
+
+function showAlert(message) {
+    const alertContainer = document.getElementById('alert-container');
+    const alertMessage = document.createElement('div');
+    alertMessage.className = 'alert';
+    alertMessage.textContent = message;
+    alertContainer.appendChild(alertMessage);
+    setTimeout(() => {
+        alertMessage.remove();
+    }, 5000); // Remove alert after 5 seconds
 }
 
 function addToCart(productName, price) {
@@ -1070,14 +1140,18 @@ function toggleCart() {
 }
 
 function proceedToCheckout() {
-    document.getElementById('user-details').style.display = 'block';
+    if ((total - additionalFee) < 200) {
+        showAlert("Minimum order total must be Rs. 200 to proceed to checkout.");
+    } else {
+        document.getElementById('user-details').style.display = 'block';
+    }
 }
 
 function validatePostalCode() {
     const postalCodeInput = document.getElementById('postal-code');
     const postalCode = postalCodeInput.value.trim();
     if (!/^\d{6}$/.test(postalCode)) {
-        alert("Postal code must contain 6 numbers.");
+        showAlert("Postal code must contain 6 numbers.");
         postalCodeInput.value = "";
         return;
     }
@@ -1093,7 +1167,7 @@ function fillAddress(postalCode) {
     } else {
         stateInput.value = "";
         cityInput.value = "";
-        alert("Postal code not found.");
+        showAlert("Postal code not found.");
     }
 }
 
@@ -1107,13 +1181,13 @@ function placeOrder() {
 
     // Check if any required field is empty
     if (!name || !mobile || !postalCode || !state || !city || !roadLane) {
-        alert("Please fill in all required fields.");
+        showAlert("Please fill in all required fields.");
         return;
     }
 
     // Check if the cart is empty
     if (cart.length === 0) {
-        alert("Your cart is empty. Add items before placing an order.");
+        showAlert("Your cart is empty. Add items before placing an order.");
         return;
     }
 
@@ -1130,11 +1204,11 @@ function placeOrder() {
     sendDataToGoogleSheets(orderDetails);
 
     if (total === 0) {
-        alert("Your total amount is 0. Please add items to your cart before placing an order.");
+        showAlert("Your total amount is 0. Please add items to your cart before placing an order.");
         return;
     }
 
-    alert("Order placed successfully!");
+    showAlert("Order placed successfully!");
     cart = [];
     total = 0;
     additionalFee = 0;
@@ -1144,6 +1218,7 @@ function placeOrder() {
     document.getElementById('user-details').style.display = 'none';
     localStorage.clear();
 }
+
 </script>
 <script>
   const slider = document.getElementById('slider');
